@@ -20,7 +20,3 @@ vowel_changer(character_string, type_change = "remove", capitalization = FALSE)
 \description{
 Title
 }
-\examples{
-vowel_changer(character_string = "The quick red fox jumped over the lazy brown dog", type_change = "remove", capitalization = FALSE)
-
-}

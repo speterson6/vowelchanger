@@ -3,7 +3,6 @@
 #Created by Skyler Peterson
 #2/26/2026
 #####################################
-library(stringr)
 #' Title
 #'
 #' @param character_string a character string that will be changed
@@ -12,21 +11,20 @@ library(stringr)
 #'
 #' @return                 A string that came in will be changed slightly and printed
 #'
-#' @examples vowel_changer(character_string = "The quick red fox jumped over the lazy brown dog", type_change = "remove", capitalization = FALSE)
-#'
+#' @export
 vowel_changer <-
   function(character_string,
            type_change = "remove",
            capitalization = FALSE) {
-
+  library(stringr)
     if (class(character_string) != "character") {
       stop("Input character_string needs to be a character")
     }
     if (type_change == "remove") {
-      changed_string <- str_replace_all(character_string, "[aeiou]", "")
+      changed_string <- stringr::str_replace_all(character_string, "[aeiou]", "")
 
     } else if (type_change == "replace") {
-      changed_string <- str_replace_all(
+      changed_string <- stringr::str_replace_all(
         character_string,
         c(
           "a" = "4",
